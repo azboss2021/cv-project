@@ -1,4 +1,3 @@
-import { type } from '@testing-library/user-event/dist/type';
 import React, { Component } from 'react';
 
 export default class InfoForm extends Component {

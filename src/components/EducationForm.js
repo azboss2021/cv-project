@@ -30,6 +30,7 @@ export default class EducationForm extends Component {
 
   HandleDelete = (e) => {
     e.preventDefault();
+    this.props.setEducations(this.props.educations.filter(education => education.id !== e.target.id.slice(-8)))
   };
 
   render() {
@@ -55,7 +56,7 @@ export default class EducationForm extends Component {
           onChange={(e) => this.HandleChange(e, 'yearEnd')}
           id={'form_year_end' + this.props.id}
         ></input>
-        <button onClick={(e) => this.HandleDelete(e)}>Delete</button>
+        <button id={'education_delete' + this.props.id} onClick={(e) => this.HandleDelete(e)}>Delete</button>
       </form>
     );
   }

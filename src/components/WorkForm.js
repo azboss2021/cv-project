@@ -28,6 +28,7 @@ export default class WorkForm extends Component {
 
   HandleDelete = (e) => {
     e.preventDefault();
+    this.props.setWorks(this.props.works.filter(work => work.id !== e.target.id.slice(-8)))
   };
 
   render() {
@@ -55,7 +56,7 @@ export default class WorkForm extends Component {
           onChange={(e) => this.HandleChange(e, 'yearEnd')}
           id={'form_year_end_work' + this.props.id}
         ></input>
-        <button onClick={(e) => this.HandleDelete(e)}>Delete</button>
+        <button id={'work_delete' + this.props.id} onClick={(e) => this.HandleDelete(e)}>Delete</button>
       </form>
     );
   }
