@@ -28,6 +28,10 @@ export default class EducationForm extends Component {
     this.props.setEducations(educations);
   };
 
+  HandleDelete = (e) => {
+    e.preventDefault();
+  };
+
   render() {
     return (
       <form key={'form_education' + this.props.id}>
@@ -51,6 +55,7 @@ export default class EducationForm extends Component {
           onChange={(e) => this.HandleChange(e, 'yearEnd')}
           id={'form_year_end' + this.props.id}
         ></input>
+        <button onClick={(e) => this.HandleDelete(e)}>Delete</button>
       </form>
     );
   }

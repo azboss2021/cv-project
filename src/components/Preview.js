@@ -9,6 +9,7 @@ export default class Preview extends Component {
         <div>{this.props.info.email}</div>
         <div>{this.props.info.phone}</div>
 
+        <div className=".preview_section_title">Educational Experience</div>
         {this.props.educations.map((education) => {
           return (
             <div key={'preview_education' + education.id}>
@@ -21,6 +22,7 @@ export default class Preview extends Component {
           );
         })}
 
+        <div className=".preview_section_title">Practical Experience</div>
         {this.props.works.map((work) => {
           return (
             <div key={'preview_work' + work.id}>

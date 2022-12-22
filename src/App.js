@@ -16,6 +16,7 @@ function App() {
   return (
     <>
       <Form
+        info={info}
         setInfo={setInfo}
         educations={educations}
         setEducations={setEducations}

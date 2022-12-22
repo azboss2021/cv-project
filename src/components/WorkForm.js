@@ -7,10 +7,10 @@ export default class WorkForm extends Component {
     const i = works.findIndex((work) => work.id === e.target.id.slice(-8));
 
     switch (type) {
-      case 'school':
+      case 'workplace':
         works[i].workplace = e.target.value;
         break;
-      case 'degree':
+      case 'title':
         works[i].title = e.target.value;
         break;
       case 'yearStart':
@@ -24,6 +24,10 @@ export default class WorkForm extends Component {
     }
 
     this.props.setWorks(works);
+  };
+
+  HandleDelete = (e) => {
+    e.preventDefault();
   };
 
   render() {
@@ -51,6 +55,7 @@ export default class WorkForm extends Component {
           onChange={(e) => this.HandleChange(e, 'yearEnd')}
           id={'form_year_end_work' + this.props.id}
         ></input>
+        <button onClick={(e) => this.HandleDelete(e)}>Delete</button>
       </form>
     );
   }

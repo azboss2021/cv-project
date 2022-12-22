@@ -48,7 +48,7 @@ export default class Form extends Component {
   render() {
     return (
       <div id="form">
-        <InfoForm />
+        <InfoForm info={this.props.info} setInfo={this.props.setInfo} />
 
         {this.props.educations.map((education) => {
           return (
