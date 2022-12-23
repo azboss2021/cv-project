@@ -13,11 +13,14 @@ export default class WorkForm extends Component {
       case 'title':
         works[i].title = e.target.value;
         break;
-      case 'yearStart':
-        works[i].yearStart = e.target.value;
+      case 'dateStart':
+        works[i].dateStart = e.target.value;
         break;
-      case 'yearEnd':
-        works[i].yearEnd = e.target.value;
+      case 'dateEnd':
+        works[i].dateEnd = e.target.value;
+        break;
+      case 'details':
+        works[i].details = e.target.value;
         break;
       default:
         break;
@@ -44,18 +47,19 @@ export default class WorkForm extends Component {
           onChange={(e) => this.HandleChange(e, 'title')}
           id={'form_title' + this.props.id}
         ></input>
-        <label htmlFor={'form_year_start_work' + this.props.id}>
-          Year Start
+        <label htmlFor={'form_date_start_work' + this.props.id}>Date Start
         </label>
         <input
-          onChange={(e) => this.HandleChange(e, 'yearStart')}
-          id={'form_year_start_work' + this.props.id}
+          onChange={(e) => this.HandleChange(e, 'dateStart')}
+          id={'form_date_start_work' + this.props.id}
         ></input>
-        <label htmlFor={'form_year_end_work' + this.props.id}>Year End</label>
+        <label htmlFor={'form_date_end_work' + this.props.id}>Date End</label>
         <input
-          onChange={(e) => this.HandleChange(e, 'yearEnd')}
-          id={'form_year_end_work' + this.props.id}
+          onChange={(e) => this.HandleChange(e, 'dateEnd')}
+          id={'form_date_end_work' + this.props.id}
         ></input>
+        <label htmlFor={'form_details_work' + this.props.id}>Details</label>
+        <input onChange={(e) => this.HandleChange(e, 'details')} type="text" id={'form_details_work' + this.props.id}></input>
         <button id={'work_delete' + this.props.id} onClick={(e) => this.HandleDelete(e)}>Delete</button>
       </form>
     );

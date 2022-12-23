@@ -15,11 +15,14 @@ export default class EducationForm extends Component {
       case 'degree':
         educations[i].degree = e.target.value;
         break;
-      case 'yearStart':
-        educations[i].yearStart = e.target.value;
+      case 'dateStart':
+        educations[i].dateStart = e.target.value;
         break;
-      case 'yearEnd':
-        educations[i].yearEnd = e.target.value;
+      case 'dateEnd':
+        educations[i].dateEnd = e.target.value;
+        break;
+      case 'details':
+        educations[i].details = e.target.value;
         break;
       default:
         break;
@@ -46,16 +49,18 @@ export default class EducationForm extends Component {
           onChange={(e) => this.HandleChange(e, 'degree')}
           id={'form_degree' + this.props.id}
         ></input>
-        <label htmlFor={'form_year_start' + this.props.id}>Year Start</label>
+        <label htmlFor={'form_date_start' + this.props.id}>Date Start</label>
         <input
-          onChange={(e) => this.HandleChange(e, 'yearStart')}
-          id={'form_year_start' + this.props.id}
+          onChange={(e) => this.HandleChange(e, 'dateStart')}
+          id={'form_date_start' + this.props.id}
         ></input>
-        <label htmlFor={'form_year_end' + this.props.id}>Year End</label>
+        <label htmlFor={'form_date_end' + this.props.id}>Date End</label>
         <input
-          onChange={(e) => this.HandleChange(e, 'yearEnd')}
-          id={'form_year_end' + this.props.id}
+          onChange={(e) => this.HandleChange(e, 'dateEnd')}
+          id={'form_date_end' + this.props.id}
         ></input>
+        <label htmlFor={'form_details_education' + this.props.id}>Details</label>
+        <input onChange={(e) => this.HandleChange(e, 'details')} type="text" id={'form_details_education' + this.props.id}></input>
         <button id={'education_delete' + this.props.id} onClick={(e) => this.HandleDelete(e)}>Delete</button>
       </form>
     );

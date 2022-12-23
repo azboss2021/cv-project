@@ -5,34 +5,49 @@ export default class Preview extends Component {
     return (
       <div id="preview">
         <div id="preview_info">
-        <div>{this.props.info.firstName} {this.props.info.lastName}</div>
-        <div>{this.props.info.email}</div>
-        <div>{this.props.info.phone}</div>
+          <div id="name">{this.props.info.name}</div>
+          <div id="info_details">
+            <span id="address">{this.props.info.address}</span>
+            <span> * </span>
+            <span id="phone">{this.props.info.phone}</span>
+            <span> * </span>
+            <span id="email">{this.props.info.email}</span>
+          </div>
         </div>
 
-        <div className="preview_section_title">Educational Experience</div>
-        {this.props.educations.map((education) => {
-          return (
-            <div key={'preview_education' + education.id}>
-              <div>School: {education.school}</div>
-              <div>Degree: {education.degree}</div>
-              <div>{education.yearStart} - {education.yearEnd}</div>
-              <hr></hr>
-            </div>
-          );
-        })}
+        <div id="preview_education">
+          {this.props.educations.length > 0 && <div className="preview_section_title">EDUCATION</div>}
+          <hr></hr>
+          <div id="educations">
+            {this.props.educations.map((education) => {
+              return (
+                <div className="education" key={'preview_education' + education.id}>
+                  <div>School: {education.school}</div>
+                  <div>Degree: {education.degree}</div>
+                  <div>{education.dateStart} - {education.dateEnd}</div>
+                  <div>{education.details}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
 
-        <div className=".preview_section_title">Practical Experience</div>
-        {this.props.works.map((work) => {
-          return (
-            <div key={'preview_work' + work.id}>
-              <div>Workplace: {work.workplace}</div>
-              <div>Title: {work.title}</div>
-              <div>{work.yearStart} - {work.yearEnd}</div>
-              <hr></hr>
-            </div>
-          );
-        })}
+        <div id="preview_work">
+          {this.props.works.length > 0 && <div className=".preview_section_title">WORK EXPERIENCE</div>}
+          <hr></hr>
+          <div id="works">
+            {this.props.works.map((work) => {
+              return (
+                <div className="work" key={'preview_work' + work.id}>
+                  <div>Workplace: {work.workplace}</div>
+                  <div>Title: {work.title}</div>
+                  <div>{work.dateStart} - {work.dateEnd}</div>
+                  <div>{work.details}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     );
   }

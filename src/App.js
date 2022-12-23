@@ -5,16 +5,18 @@ import Preview from './components/Preview';
 
 function App() {
   const [info, setInfo] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
     phone: '',
+    address: '',
   });
   const [educations, setEducations] = useState([]);
   const [works, setWorks] = useState([]);
 
   return (
     <>
+      <div className="app_header">FORM</div>
+
       <Form
         info={info}
         setInfo={setInfo}
@@ -23,6 +25,9 @@ function App() {
         works={works}
         setWorks={setWorks}
       />
+
+      <div className="app_header">PREVIEW</div>
+
       <Preview info={info} educations={educations} works={works} />
     </>
   );

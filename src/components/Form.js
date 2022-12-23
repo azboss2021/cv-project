@@ -10,8 +10,9 @@ export default class Form extends Component {
       educations.concat({
         school: '',
         degree: '',
-        yearStart: '',
-        yearEnd: '',
+        dateStart: '',
+        dateEnd: '',
+        details: '',
         id: uniqid(),
       })
     );
@@ -22,64 +23,46 @@ export default class Form extends Component {
       works.concat({
         workplace: '',
         title: '',
-        yearStart: '',
-        yearEnd: '',
+        dateStart: '',
+        dateEnd: '',
+        details: '',
         id: uniqid(),
       })
     );
   };
 
-  SubmitInfo = (e) => {
-    e.preventDefault();
-
-    const first = document.querySelector('#form_first');
-    const last = document.querySelector('#form_last');
-    const email = document.querySelector('#form_email');
-    const phone = document.querySelector('#form_phone');
-
-    this.props.setInfo({
-      first: first.value,
-      last: last.value,
-      email: email.value,
-      phone: phone.value,
-    });
-  };
-
   render() {
     return (
       <div id="form">
+        <div className="form_section_title">General Information:</div>
         <InfoForm info={this.props.info} setInfo={this.props.setInfo} />
 
+        <div className="form_section_title">Educational Experiences:</div>
         {this.props.educations.map((education) => {
           return (
-            <div key={education.id}>
               <EducationForm
+                key={education.id}
                 id={education.id}
                 educations={this.props.educations}
                 setEducations={this.props.setEducations}
               />
-              <hr></hr>
-            </div>
           );
         })}
-
         <button onClick={this.AddEducation}>Add Educational Experience</button>
 
+        <div className="form_section_title">Practical Experiences:</div>
         {this.props.works.map((work) => {
           return (
-            <div key={work.id}>
-              <WorkForm
-                id={work.id}
-                works={this.props.works}
-                setWorks={this.props.setWorks}
-              />
-              <hr></hr>
-            </div>
+            <WorkForm
+              key={work.id}
+              id={work.id}
+              works={this.props.works}
+              setWorks={this.props.setWorks}
+            />
           );
         })}
 
         <button onClick={this.AddWork}>Add Work Experience</button>
-        <button onSubmit={(e) => this.SubmitInfo(e)}>Submit</button>
       </div>
     );
   }

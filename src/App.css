@@ -1,3 +1,68 @@
-#preview {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: oldlace;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 400px;
+}
+
+.app_header {
+  background: orange;
+}
+
+.form_section_title {
+  font-weight: bold;
+}
+
+#form {
   background: lightblue;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+input {
+  width: 300px;
+}
+
+#preview {
+  background: white;
+  padding: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto;
+}
+
+#name {
+  font-size: 50px;
+  text-align: center;
+  color: darkblue;
+  font-weight: bold;
+}
+
+#info_details {
+  font-size: 12px;
+  text-align: center;
+}
+
+#educations, #works {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+hr {
+  margin: 0;
 }
