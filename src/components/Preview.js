@@ -22,10 +22,12 @@ export default class Preview extends Component {
             {this.props.educations.map((education) => {
               return (
                 <div className="education" key={'preview_education' + education.id}>
-                  <div>School: {education.school}</div>
-                  <div>Degree: {education.degree}</div>
-                  <div>{education.dateStart} - {education.dateEnd}</div>
-                  <div>{education.details}</div>
+                  <div className="left">{education.dateStart} — {education.dateEnd}</div>
+                  <div className="right">
+                    <div className="school">{education.school}</div>
+                    <div>{education.degree}</div>
+                    <div>{education.details}</div>
+                  </div>
                 </div>
               );
             })}
@@ -33,16 +35,18 @@ export default class Preview extends Component {
         </div>
 
         <div id="preview_work">
-          {this.props.works.length > 0 && <div className=".preview_section_title">WORK EXPERIENCE</div>}
+          {this.props.works.length > 0 && <div className="preview_section_title">WORK EXPERIENCE</div>}
           <hr></hr>
           <div id="works">
             {this.props.works.map((work) => {
               return (
                 <div className="work" key={'preview_work' + work.id}>
-                  <div>Workplace: {work.workplace}</div>
-                  <div>Title: {work.title}</div>
-                  <div>{work.dateStart} - {work.dateEnd}</div>
-                  <div>{work.details}</div>
+                  <div className="left">{work.dateStart} — {work.dateEnd}</div>
+                  <div className="right">
+                    <div>{work.title}</div>
+                    <div className="workplace">{work.workplace}</div>
+                    <div>{work.details}</div>
+                  </div>
                 </div>
               );
             })}

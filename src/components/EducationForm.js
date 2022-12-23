@@ -38,7 +38,7 @@ export default class EducationForm extends Component {
 
   render() {
     return (
-      <form key={'form_education' + this.props.id}>
+      <div className="form" key={'form_education' + this.props.id}>
         <label htmlFor={'form_school' + this.props.id}>School</label>
         <input
           onChange={(e) => this.HandleChange(e, 'school')}
@@ -62,7 +62,7 @@ export default class EducationForm extends Component {
         <label htmlFor={'form_details_education' + this.props.id}>Details</label>
         <input onChange={(e) => this.HandleChange(e, 'details')} type="text" id={'form_details_education' + this.props.id}></input>
         <button id={'education_delete' + this.props.id} onClick={(e) => this.HandleDelete(e)}>Delete</button>
-      </form>
+      </div>
     );
   }
 }

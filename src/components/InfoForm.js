@@ -42,7 +42,7 @@ export default class InfoForm extends Component {
 
   render() {
     return (
-      <form>
+      <div className="form" >
         <label htmlFor="form_name">Name</label>
         <input
           onChange={(e) => this.HandleChange(e, 'name')}
@@ -63,7 +63,7 @@ export default class InfoForm extends Component {
           onChange={(e) => this.HandleChange(e, 'email')}
           id="form_email"
         ></input>
-      </form>
+      </div>
     );
   }
 }

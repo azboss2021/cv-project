@@ -36,7 +36,7 @@ export default class WorkForm extends Component {
 
   render() {
     return (
-      <form key={'form_work' + this.props.id}>
+      <div className="form" key={'form_work' + this.props.id}>
         <label htmlFor={'form_workplace' + this.props.id}>Workplace</label>
         <input
           onChange={(e) => this.HandleChange(e, 'workplace')}
@@ -61,7 +61,7 @@ export default class WorkForm extends Component {
         <label htmlFor={'form_details_work' + this.props.id}>Details</label>
         <input onChange={(e) => this.HandleChange(e, 'details')} type="text" id={'form_details_work' + this.props.id}></input>
         <button id={'work_delete' + this.props.id} onClick={(e) => this.HandleDelete(e)}>Delete</button>
-      </form>
+      </div>
     );
   }
 }
