@@ -22,7 +22,6 @@ export default class Preview extends Component {
               <hr></hr>
             </div>
           }
-          <hr></hr>
           <div id="educations">
             {this.props.educations.map((education) => {
               return (
