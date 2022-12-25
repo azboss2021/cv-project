@@ -5,45 +5,75 @@
 body {
   margin: 0;
   padding: 0;
-  background: oldlace;
+  background: #1a1a1a;
+  color: white;
+}
+
+#App {
+  padding: 2rem;
 }
 
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 400px;
+  /* max-width: 400px; */
+  gap: .5rem;
 }
 
-.app_header {
-  background: orange;
+.form > div > input {
+  border: none;
+  padding: .25rem .5rem;
+  font-size: 16px;
+}
+
+#form_educations, #form_works, #educations, #works, #form, #preview, .form_section {
+  display: flex;
+  flex-direction: column;
 }
 
 .form_section_title {
   font-weight: bold;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
 #form {
-  background: lightblue;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#form_educations, #form_works {
+  gap: 2rem;
+}
+
+.form > div {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+
+label {
+  font-size: 12px;
 }
 
 input {
   width: 300px;
 }
 
+input:focus {
+  background: lightblue;
+  outline: none;
+}
+
 #preview {
   background: white;
   padding: 3rem 3rem;
-  display: flex;
-  flex-direction: column;
   gap: 1.5rem;
   width: 8.5in;
-  height: 11in;
+  min-height: 11in;
   margin: 0 auto;
+  color: black;
 }
 
 #name {
@@ -59,8 +89,6 @@ input {
 }
 
 #educations, #works {
-  display: flex;
-  flex-direction: column;
   gap: 1.5rem;
   font-size: 16px;
 }
@@ -85,4 +113,26 @@ hr {
 
 .school, .workplace {
   font-style: italic;
+}
+
+.button_delete {
+  background: #d9534f;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+.button_add {
+  background: #0275d8;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: .5rem;
+  font-size: 16px;
+}
+
+.form_section {
+  margin-bottom: 3rem;
+  gap: .5rem;
 }

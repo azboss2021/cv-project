@@ -43,26 +43,34 @@ export default class InfoForm extends Component {
   render() {
     return (
       <div className="form" >
-        <label htmlFor="form_name">Name</label>
-        <input
-          onChange={(e) => this.HandleChange(e, 'name')}
-          id="form_name"
-        ></input>
-        <label htmlFor="form_address">Address</label>
-        <input
-          onChange={(e) => this.HandleChange(e, 'address')}
-          id="form_address"
-        ></input>
-        <label htmlFor="form_phone">Phone</label>
-        <input
-          onChange={(e) => this.HandleChange(e, 'phone')}
-          id="form_phone"
-        ></input>
-        <label htmlFor="form_email">Email</label>
-        <input
-          onChange={(e) => this.HandleChange(e, 'email')}
-          id="form_email"
-        ></input>
+        <div>
+            <label htmlFor="form_name">Name</label>
+            <input
+              onChange={(e) => this.HandleChange(e, 'name')}
+              id="form_name"
+            ></input>
+        </div>
+        <div>
+          <label htmlFor="form_address">Address</label>
+          <input
+            onChange={(e) => this.HandleChange(e, 'address')}
+            id="form_address"
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="form_phone">Phone</label>
+          <input
+            onChange={(e) => this.HandleChange(e, 'phone')}
+            id="form_phone"
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="form_email">Email</label>
+          <input
+            onChange={(e) => this.HandleChange(e, 'email')}
+            id="form_email"
+          ></input>
+        </div>
       </div>
     );
   }

@@ -37,30 +37,40 @@ export default class WorkForm extends Component {
   render() {
     return (
       <div className="form" key={'form_work' + this.props.id}>
-        <label htmlFor={'form_workplace' + this.props.id}>Workplace</label>
-        <input
-          onChange={(e) => this.HandleChange(e, 'workplace')}
-          id={'form_workplace' + this.props.id}
-        ></input>
-        <label htmlFor={'form_title' + this.props.id}>Title</label>
-        <input
-          onChange={(e) => this.HandleChange(e, 'title')}
-          id={'form_title' + this.props.id}
-        ></input>
-        <label htmlFor={'form_date_start_work' + this.props.id}>Date Start
-        </label>
-        <input
-          onChange={(e) => this.HandleChange(e, 'dateStart')}
-          id={'form_date_start_work' + this.props.id}
-        ></input>
-        <label htmlFor={'form_date_end_work' + this.props.id}>Date End</label>
-        <input
-          onChange={(e) => this.HandleChange(e, 'dateEnd')}
-          id={'form_date_end_work' + this.props.id}
-        ></input>
-        <label htmlFor={'form_details_work' + this.props.id}>Details</label>
-        <input onChange={(e) => this.HandleChange(e, 'details')} type="text" id={'form_details_work' + this.props.id}></input>
-        <button id={'work_delete' + this.props.id} onClick={(e) => this.HandleDelete(e)}>Delete</button>
+        <div>
+          <label htmlFor={'form_workplace' + this.props.id}>Workplace</label>
+          <input
+            onChange={(e) => this.HandleChange(e, 'workplace')}
+            id={'form_workplace' + this.props.id}
+          ></input>
+        </div>
+        <div>
+          <label htmlFor={'form_title' + this.props.id}>Title</label>
+          <input
+            onChange={(e) => this.HandleChange(e, 'title')}
+            id={'form_title' + this.props.id}
+          ></input>
+        </div>
+        <div>
+          <label htmlFor={'form_date_start_work' + this.props.id}>Date Start
+          </label>
+          <input
+            onChange={(e) => this.HandleChange(e, 'dateStart')}
+            id={'form_date_start_work' + this.props.id}
+          ></input>
+        </div>
+        <div>
+          <label htmlFor={'form_date_end_work' + this.props.id}>Date End</label>
+          <input
+            onChange={(e) => this.HandleChange(e, 'dateEnd')}
+            id={'form_date_end_work' + this.props.id}
+          ></input>
+        </div>
+        <div>
+          <label htmlFor={'form_details_work' + this.props.id}>Details</label>
+          <input onChange={(e) => this.HandleChange(e, 'details')} type="text" id={'form_details_work' + this.props.id}></input>
+        </div>
+        <button className="button_delete" id={'work_delete' + this.props.id} onClick={(e) => this.HandleDelete(e)}>Delete</button>
       </div>
     );
   }

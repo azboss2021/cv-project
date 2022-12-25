@@ -14,9 +14,7 @@ function App() {
   const [works, setWorks] = useState([]);
 
   return (
-    <>
-      <div className="app_header">FORM</div>
-
+    <div id="App">
       <Form
         info={info}
         setInfo={setInfo}
@@ -26,10 +24,8 @@ function App() {
         setWorks={setWorks}
       />
 
-      <div className="app_header">PREVIEW</div>
-
       <Preview info={info} educations={educations} works={works} />
-    </>
+    </div>
   );
 }
 
