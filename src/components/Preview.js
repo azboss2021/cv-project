@@ -16,7 +16,12 @@ export default class Preview extends Component {
         </div>
 
         <div id="preview_education">
-          {this.props.educations.length > 0 && <div className="preview_section_title">EDUCATION</div>}
+          {this.props.educations.length > 0 && 
+            <div>
+              <div className="preview_section_title">EDUCATION</div>
+              <hr></hr>
+            </div>
+          }
           <hr></hr>
           <div id="educations">
             {this.props.educations.map((education) => {
@@ -35,8 +40,12 @@ export default class Preview extends Component {
         </div>
 
         <div id="preview_work">
-          {this.props.works.length > 0 && <div className="preview_section_title">WORK EXPERIENCE</div>}
-          <hr></hr>
+          {this.props.works.length > 0 && 
+            <div>
+              <div className="preview_section_title">WORK EXPERIENCE</div>
+              <hr></hr>
+            </div>
+          }
           <div id="works">
             {this.props.works.map((work) => {
               return (
