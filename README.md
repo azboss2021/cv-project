@@ -1,9 +1,23 @@
 # CV Project
-The Odin Project CV project.
 
-Learned basic React framework. Lots of useState. Javascript, vanilla CSS, HTML.
+## A basic CV builder app that lets you create a resume by filling out simple forms.
 
-Live: https://azboss2021.github.io/cv-project/
-(Deployed using gh-pages package)
+This project was built while following [The Odin Project](https://www.theodinproject.com/) curriculum. The app is functional, but does not allow user to export pdf. Try out the demo below.
 
-This project utilizes class components, and only displays knowledge of useState and props. (May contain bad practices).
+➡️ [LIVE DEMO](https://azboss2021.github.io/cv-project/)
+
+## What I used/learned:
+
+* React class components and useState
+* CSS grid
+
+## Screenshot Preview
+
+![screenshot](./screenshot_cv-project_1.png?raw=true)
+![screenshot](./screenshot_cv-project_2.png?raw=true)
+
+## What could be improved
+
+* Export pdf
+* Optimizations for setting states
+* More options to be added for resume (skills, personal values, etc.)
