@@ -20,5 +20,4 @@ This project was built while following [The Odin Project](https://www.theodinpro
 
 * Display responsiveness (Originally made for 16:9 1080p screens)
 * Export pdf
-* Optimizations for setting states
 * More options to be added for resume (skills, personal values, etc.)
